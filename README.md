@@ -1,24 +1,6 @@
-# README
+# Projet : Eventbrite : introduction et backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Groupe
+- RABEHARISOA Rinah Philbert - https://github.com/RinahPh
+- Alain Christian RADAFIARIJAONA - https://github.com/christian-001
+- Rabedaoro David N H / David N H - https://github.com/RDavidNH
