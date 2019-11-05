@@ -1,2 +1,49 @@
-<h1 id="">New</h1>
-
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 id="">Créer un évènement</h1>
+      
+      <% if @new_event.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <p>Nous n'avons pas réussi à créer l'évènement pour la (ou les) raison(s) suivante(s) :</p>
+          <ul>
+            <% @new_event.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      
+      <%= form_tag url_for(action: 'create'), method: 'post' do %>
+        <%= label_tag 'Titre' %>
+        <%= text_field_tag 'title', @new_event.title, :class => 'form-control' %>
+        <br>
+ 
+        <%= label_tag 'Début' %>
+        <%= text_field_tag 'start_date', @new_event.start_date, :class => 'form-control' %>
+        <br>
+        
+        <%= label_tag 'Durée' %>
+        <%= text_field_tag 'duration', @new_event.duration, :class => 'form-control' %>
+        <br>
+        
+        <%= label_tag 'Description' %>
+        <%= text_field_tag 'description', @new_event.description, :class => 'form-control' %>
+        <br>
+        
+        <%= label_tag 'Prix' %>
+        <%= text_field_tag 'price', @new_event.price, :class => 'form-control' %>
+        <br>
+        
+        <%= label_tag 'Lieu' %>
+        <%= text_field_tag 'location', @new_event.location, :class => 'form-control' %>
+        <br>
+        
+        <input class="btn btn-primary" type="submit" value="Créer">
+        
+      <% end %>
+      
+      
+    </div>
+  </div>
+</div>

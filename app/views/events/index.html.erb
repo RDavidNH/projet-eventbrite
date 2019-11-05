@@ -1,2 +1,31 @@
-<h1 id="">Index</h1>
-
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 id="">Les évènements</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Début</th>
+            <th>Titre</th>
+            <th>Durée</th>
+            <th>Description</th>
+            <th>Prix</th>
+            <th>Lieu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @events.each do |e|%>
+          <tr>
+            <td><%= e.start_date %></td>
+            <td> <a href="<%= event_path(e.id) %>"><%= e.title %></a> </td>
+            <td><%= e.duration %></td>
+            <td><%= e.description %></td>
+            <td>$<%= e.price %></td>
+            <td><%= e.location %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
