@@ -14,6 +14,7 @@ user = User.create(
   last_name: 'test user',
   email: 'admin789@yopmail.com',
   password: 'adminadmin',
+  password_confirmation: 'adminadmin',
   description: 'fake user for test'
 )
 
