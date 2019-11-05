@@ -13,7 +13,7 @@ user = User.create(
   first_name: 'test',
   last_name: 'test user',
   email: 'admin789@yopmail.com',
-  password: 'adminadimn',
+  password: 'adminadmin',
   description: 'fake user for test'
 )
 
