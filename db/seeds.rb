@@ -6,9 +6,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Event.destroy_all
+
 user = User.create(
-  first_name: 'user 1',
+  first_name: 'test',
   last_name: 'test user',
-  email: 'user1@yopmail.com',
+  email: 'admin789@yopmail.com',
+  password: 'adminadimn',
   description: 'fake user for test'
 )
+
+# create some Events
+10.times do
+  event = Event.create(
+    start_date: Faker::Date.in_date_period,
+    duration: Faker::Number.within(range: 1..5),
+    title: Faker::Lorem.sentence,
+    description: Faker::Lorem.paragraph(sentence_count: 8),
+    price: Faker::Commerce.price,
+    location: Faker::Address.city,
+    user: user
+  )
+
+end
+

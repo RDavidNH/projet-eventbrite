@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1 id="">Profile</h1>
+      <table class="table">
+        <tr>
+          <th>Prénom</th>
+          <td><%= current_user.first_name %></td>
+        </tr>
+        <tr>
+          <th>Nom</th>
+          <td><%= current_user.last_name %></td>
+        </tr>
+        <tr>
+          <th>Description</th>
+          <td><%= current_user.description %></td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td><%= current_user.email %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 id="">Les évènements</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Début</th>
+            <th>Titre</th>
+            <th>Durée</th>
+            <th>Description</th>
+            <th>Prix</th>
+            <th>Lieu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @user_events.each do |e|%>
+          <tr>
+            <td><%= e.start_date %></td>
+            <td> <a href="<%= event_path(e.id) %>"><%= e.title %></a> </td>
+            <td><%= e.duration %></td>
+            <td><%= e.description %></td>
+            <td>$<%= e.price %></td>
+            <td><%= e.location %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</div>

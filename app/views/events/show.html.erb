@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 id=""><%= @event.title %></h1>
+      <table class="table">
+        <tr>
+          <th>Début</th>
+          <td><%= @event.start_date %></td>
+        </tr>
+        <tr>
+          <th>Durée</th>
+          <td><%= @event.duration %></td>
+        </tr>
+        <tr>
+          <th>Description</th>
+          <td><%= @event.description %></td>
+        </tr>
+        <tr>
+          <th>Prix</th>
+          <td>$<%= @event.price %></td>
+        </tr>
+        <tr>
+          <th>Lieu</th>
+          <td><%= @event.location %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
