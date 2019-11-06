@@ -1,7 +1,7 @@
 # Projet : Eventbrite : introduction et backend
 
-Heroku: https://projet-eventbrite.herokuapp.com/
-email: admin789@yopmail.com
+Heroku: https://projet-eventbrite.herokuapp.com/  
+email: admin789@yopmail.com  
 pw: adminadmin
 
 ### Groupe
