@@ -1,6 +1,8 @@
 # Projet : Eventbrite : introduction et backend
 
 Heroku: https://projet-eventbrite.herokuapp.com/
+email: admin789@yopmail.com
+pw: adminadmin
 
 ### Groupe
 - RABEHARISOA Rinah Philbert - https://github.com/RinahPh
