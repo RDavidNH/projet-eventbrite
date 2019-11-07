@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1 id=""><%= @event.title %></h1>
+      <h1><%= @event.title %></h1>
+      <h4 class="text-capitalize">
+          par <a href="<%= user_path(@event.user.id) %>"><%= @event.user.first_name %> <%= @event.user.last_name %></a>
+      </h4>
       <table class="table">
         <tr>
           <th>Début</th>
@@ -24,6 +27,8 @@
           <td><%= @event.location %></td>
         </tr>
       </table>
+
+      <a href="#" class="btn btn-primary btn-block">Participer à l'évènement</a>
     </div>
   </div>
 </div>
