@@ -28,7 +28,8 @@
         </tr>
       </table>
 
-      <a href="#" class="btn btn-primary btn-block">Participer à l'évènement</a>
+      <a href="<%= new_event_attendance_path(@event.id) %>" class="btn btn-primary">Participer à l'évènement</a>
+      <a href="<%= event_attendances_path(@event.id) %>" class="btn btn-primary">Liste des participants</a>
     </div>
   </div>
 </div>
