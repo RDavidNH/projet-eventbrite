@@ -11,8 +11,6 @@ class EventsController < ApplicationController
   end
 
   def create
-    p params
-
     @new_event = Event.new(
       title: params[:title],
       start_date: params[:start_date],
