@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+    <div class="col-sm-7">
+        <h1><%= @event.title %></h1>
+        <h4 class="text-capitalize">
+            par <a href="<%= user_path(@event.user.id) %>"><%= @event.user.first_name %> <%= @event.user.last_name %></a>
+        </h4>
+
+
+        <a href="<%= new_event_attendance_path %>" class="btn btn-primary btn-block">
+            Je m'inscris à l'évènement
+        </a>
+
+    </div>
+
+    <div class="col-sm-5">
+        <h3>A propos de l'évènement</h3>
+        <table class="table">
+            <tr>
+                <th>Début</th>
+                <td><%= @event.start_date %></td>
+            </tr>
+            <tr>
+                <th>Durée</th>
+                <td><%= @event.duration %></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td><%= @event.description %></td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>$<%= @event.price %></td>
+            </tr>
+            <tr>
+                <th>Lieu</th>
+                <td><%= @event.location %></td>
+            </tr>
+        </table>
+
+    </div>
+    </div>
+</div>
