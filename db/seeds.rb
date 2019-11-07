@@ -32,3 +32,27 @@ user = User.create(
 
 end
 
+# create 10 users with 5 events each
+10.times do |i|
+    user = User.create(
+        first_name: Faker::Name.first_name,
+        last_name: Faker::Name.last_name,
+        email: "ebadmin#{i}@yopmail.com",
+        password: 'adminadmin',
+        password_confirmation: 'adminadmin',
+        description: 'fake user for test'
+    )
+
+    rand(0..8).times do
+        event = Event.create(
+          start_date: Faker::Date.in_date_period,
+          duration: Faker::Number.within(range: 1..5),
+          title: Faker::Lorem.sentence,
+          description: Faker::Lorem.paragraph(sentence_count: 8),
+          price: Faker::Commerce.price,
+          location: Faker::Address.city,
+          user: user
+        )
+    end
+
+end
