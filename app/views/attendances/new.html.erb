@@ -6,10 +6,9 @@
             par <a href="<%= user_path(@event.user.id) %>"><%= @event.user.first_name %> <%= @event.user.last_name %></a>
         </h4>
 
-
-        <a href="<%= new_event_attendance_path %>" class="btn btn-primary btn-block">
+        <button id="participate" type="button" class="btn btn-primary">
             Je m'inscris à l'évènement
-        </a>
+        </button>
 
     </div>
 
