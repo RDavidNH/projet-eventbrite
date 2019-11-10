@@ -1,6 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-5">
+        <%if @event.photo.attached?%>
+          <%= image_tag @event.photo, alt: 'photo', style: 'width: 100%' %>
+        <%else%>
+          <h2 class="text-muted">Aucune photo</h2>
+        <%end%>
+    </div>
+    <div class="col-sm-7">
       <h1><%= @event.title %></h1>
       <h4 class="text-capitalize">
           par <a href="<%= user_path(@event.user.id) %>"><%= @event.user.first_name %> <%= @event.user.last_name %></a>
