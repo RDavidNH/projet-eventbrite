@@ -21,6 +21,8 @@ class EventsController < ApplicationController
       user: current_user
     )
 
+    @new_event.photo.attach(params[:photo])
+
     if @new_event.save
       redirect_to @new_event
     else
